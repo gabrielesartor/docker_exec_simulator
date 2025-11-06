@@ -1,0 +1,59 @@
+FROM ubuntu:focal
+
+ARG UNAME=gsartor
+ARG UID=1000
+ARG GID=1000
+
+
+RUN apt-get update && apt-get install -y locales lsb-release curl cmake g++ wget unzip
+RUN apt-get install -y git
+RUN apt-get install -y gnupg2
+ARG DEBIAN_FRONTEND=noninteractive
+RUN dpkg-reconfigure locales
+
+# installing ROS
+RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+RUN curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | apt-key add -
+RUN apt-get update 
+RUN apt-get install -y ros-noetic-desktop-full 
+RUN apt-get install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential python3-catkin-tools -y
+RUN apt-get install -y python3-pip
+RUN pip install graphviz
+
+# dependencies for simulator
+RUN apt-get install -y ros-noetic-navigation
+RUN apt-get install -y ros-noetic-four-wheel-steering-msgs
+RUN apt-get install -y ros-noetic-moveit
+RUN apt-get install -y ros-noetic-rviz-visual-tools
+RUN apt-get install -y ros-noetic-moveit-visual-tools
+RUN apt-get install -y liborocos-bfl-dev
+
+RUN rosdep init 
+RUN rosdep update
+
+# RUN mkdir -p /home/${UNAME}/dependencies
+# RUN cd /home/${UNAME}/dependencies/ && \
+#   git clone https://github.com/ros-controls/urdf_geometry_parser.git && \
+#   git clone https://github.com/pal-robotics/ddynamic_reconfigure.git && \
+#   git clone https://github.com/DLu/wu_ros_tools.git && \
+#   git clone https://github.com/wg-perception/people.git
+# # to be added to src folder (checkout "noetic" branch for people pkg)
+# RUN cd /home/${UNAME}/dependencies/people && git checkout noetic
+
+
+RUN groupadd -g ${GID} ${UNAME}
+RUN useradd -m -u ${UID} -g ${GID} -s /bin/bash ${UNAME} 
+RUN echo "${UNAME}:${UNAME}" | chpasswd
+RUN usermod -aG sudo ${UNAME}
+
+WORKDIR /home/${UNAME}/
+
+RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+
+COPY entrypoint.sh /home/${UNAME}/Github/docker_exec_simulator/docker/entrypoint.sh
+RUN chmod +x /home/${UNAME}/Github/docker_exec_simulator/docker/entrypoint.sh
+# RUN mv /home/${UNAME}/dependencies /home/${UNAME}/Github/docker_exec_simulator/
+
+USER ${UNAME}
+
+ENTRYPOINT [ "/bin/bash" , "/home/gsartor/Github/docker_exec_simulator/docker/entrypoint.sh" ]
