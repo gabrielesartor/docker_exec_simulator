@@ -3,8 +3,9 @@
 ## 1.Docker environment setting
 First of all, install Docker on your computer and follows the following instructions.
 1. move your terminal to docker_exec_simulator/docker
-2. run ```./build_docker.sh```
-3. run ```./run_docker.sh```
+2. replace in Dockerfile UNAME and REPO_PATH with your pc local username and absolute path to the cloned repository.
+3. run ```./build_docker.sh```
+4. run ```./run_docker.sh```
 Now, in your terminal you have a virtual environment suitable to build and run the original repository.
 
 

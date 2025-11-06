@@ -1,6 +1,7 @@
 FROM ubuntu:focal
 
 ARG UNAME=gsartor
+ARG REPO_PATH=/home/gsartor/Github/docker_exec_simulator
 ARG UID=1000
 ARG GID=1000
 
@@ -50,10 +51,11 @@ WORKDIR /home/${UNAME}/
 
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 
-COPY entrypoint.sh /home/${UNAME}/Github/docker_exec_simulator/docker/entrypoint.sh
-RUN chmod +x /home/${UNAME}/Github/docker_exec_simulator/docker/entrypoint.sh
-# RUN mv /home/${UNAME}/dependencies /home/${UNAME}/Github/docker_exec_simulator/
+COPY entrypoint.sh ${REPO_PATH}/docker/entrypoint.sh
+RUN chmod +x ${REPO_PATH}/docker/entrypoint.sh
+
+ENV ENTRY_FILE=${REPO_PATH}/docker/entrypoint.sh
 
 USER ${UNAME}
 
-ENTRYPOINT [ "/bin/bash" , "/home/gsartor/Github/docker_exec_simulator/docker/entrypoint.sh" ]
+ENTRYPOINT /bin/bash $ENTRY_FILE
