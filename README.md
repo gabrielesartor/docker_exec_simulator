@@ -2,8 +2,8 @@
 
 ## 1.Docker environment setting
 First of all, install Docker on your computer and follows the following instructions.
-1. move your terminal to docker_exec_simulator/docker
-2. replace in Dockerfile UNAME and REPO_PATH with your pc local username and absolute path to the cloned repository.
+1. move your terminal to ```docker_exec_simulator/docker```
+2. replace in Dockerfile ```UNAME``` and ```REPO_PATH```, respectively, with your pc local username and absolute path to the cloned repository.
 3. run ```./build_docker.sh```
 4. run ```./run_docker.sh```
 Now, in your terminal you have a virtual environment suitable to build and run the original repository.
@@ -62,3 +62,7 @@ OR start the Mock Human
 
 ## txt[Optional] Shell 5 - Start timeline record
 ```$ rosrun exec_automaton timeline_log.py record|load```
+
+
+
+Additional information on the use arugments and environmental variables can be checked in this discussion: https://stackoverflow.com/questions/40902445/using-variable-interpolation-in-string-in-docker/40902661
