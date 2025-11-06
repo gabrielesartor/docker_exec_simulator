@@ -37,10 +37,13 @@ This implies that the planning and characterization processes have already been 
 
 ## Shell 1 - Start the simulator, moveit processes and prompt window
 ```$ ./script/full_start.sh```
+
 A few warnings and the following error are expected: "[Err] [msgs.cc:2873] Unrecognized geometry type".
 You shall keep the prompt window on the foreground. To do so, right click on the window while pressing the Super/Window key, and select "Always on Top".
 After, start the prompt node in the prompt window:
+
 ```$ ./scripts/prompt_node.sh ```
+
 Finally, remove the tool bars of the simulator with "Ctrl+H".
 
 ## Shell 2 - Start the controllers (move_arm, move_hand, simulation actions)
