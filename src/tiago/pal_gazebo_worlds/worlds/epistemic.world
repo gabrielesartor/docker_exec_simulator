@@ -259,7 +259,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epistemic_scene.dae</uri>
+              <uri>file://../../../simulator/meshes/epistemic_scene.dae</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -273,7 +273,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epistemic_scene.dae</uri>
+              <uri>file://../../../simulator/meshes/epistemic_scene.dae</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -307,7 +307,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/human.stl</uri>
+              <uri>file://../../../simulator/meshes/human.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -344,7 +344,7 @@
         <visual name='human_hand_link'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/hand.dae</uri>
+              <uri>file://../../../simulator/meshes/hand.dae</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -381,7 +381,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epi_box.stl</uri>
+              <uri>file://../../../simulator/meshes/epi_box.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -395,7 +395,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epi_box.stl</uri>
+              <uri>file://../../../simulator/meshes/epi_box.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -429,7 +429,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epi_box_cover.stl</uri>
+              <uri>file://../../../simulator/meshes/epi_box_cover.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -466,7 +466,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epi_box.stl</uri>
+              <uri>file://../../../simulator/meshes/epi_box.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -480,7 +480,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epi_box.stl</uri>
+              <uri>file://../../../simulator/meshes/epi_box.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -514,7 +514,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epi_box_cover.stl</uri>
+              <uri>file://../../../simulator/meshes/epi_box_cover.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -551,7 +551,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epi_box.stl</uri>
+              <uri>file://../../../simulator/meshes/epi_box.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -565,7 +565,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epi_box.stl</uri>
+              <uri>file://../../../simulator/meshes/epi_box.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -599,7 +599,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/epi_box_cover.stl</uri>
+              <uri>file://../../../simulator/meshes/epi_box_cover.stl</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -636,7 +636,7 @@
         <visual name='main_table_link'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/main_table.dae</uri>
+              <uri>file://../../../simulator/meshes/main_table.dae</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -650,7 +650,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/main_table.dae</uri>
+              <uri>file://../../../simulator/meshes/main_table.dae</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -684,7 +684,7 @@
         <visual name='side_table_link'>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/table.dae</uri>
+              <uri>file://../../../simulator/meshes/table.dae</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
@@ -698,7 +698,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/afavier/new_exec_sim_ws/src/simulator/meshes/table.dae</uri>
+              <uri>file://../../../simulator/meshes/table.dae</uri>
               <scale>1.0 1.0 1.0</scale>
             </mesh>
           </geometry>
