@@ -21,6 +21,8 @@ RUN apt-get install python3-rosdep python3-rosinstall python3-rosinstall-generat
 RUN apt-get install -y python3-pip
 RUN apt install python-is-python3
 RUN pip install graphviz
+RUN pip install dill
+RUN pip install simpleaudio
 
 # dependencies for simulator
 RUN apt-get install -y ros-noetic-navigation
@@ -29,6 +31,7 @@ RUN apt-get install -y ros-noetic-moveit
 RUN apt-get install -y ros-noetic-rviz-visual-tools
 RUN apt-get install -y ros-noetic-moveit-visual-tools
 RUN apt-get install -y liborocos-bfl-dev
+RUN apt-get install tmux
 
 RUN rosdep init 
 RUN rosdep update
