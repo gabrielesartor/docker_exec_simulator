@@ -19,6 +19,7 @@ RUN apt-get update
 RUN apt-get install -y ros-noetic-desktop-full 
 RUN apt-get install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential python3-catkin-tools -y
 RUN apt-get install -y python3-pip
+RUN apt install python-is-python3
 RUN pip install graphviz
 
 # dependencies for simulator
